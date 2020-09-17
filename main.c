@@ -1,9 +1,9 @@
 // Author: Kyle Chen kvc5823@psu.edu
-// Collaborator:
-// Collaborator:
-// Collaborator:
-// Section:
-// Breakout:
+// Collaborator: Aaron Hester amh7806@psu.edu
+// Collaborator: Jiarou Deng dpj5243@psu.edu
+// Collaborator: Livia Moore lmm6882psu.edu
+// Section: 10
+// Breakout: 11
 
 #include "stdio.h"
 #include "stdlib.h"
