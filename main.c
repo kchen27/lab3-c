@@ -8,41 +8,33 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include <readline/readline.h>
-#include <readline/history.h>
 
 int sum_n(int n)
 {
-  if(n<=0)
+  if(n<=1)
   {
-    return 0;
+    return n;
   }
-  return n + sum_n(n-1);
+  else
+  {
+    return n + sum_n(n-1);
+  }
 }
 
 void print_n(const char *s, int n)
 {
-  if(n<=0)
+  if (n>0)
   {
-    return;
-  }
-  else
-  {
-    print_n(s,n-1);
     printf("%s\n", s);
+    print_n(s, n-1);
   }
 }
 
-int main(void) {
-  int n = 0;
-  char *str;
-  str = readline("Enter an int: ");
-  n = atoi(str);
-  printf(sum is %d.n\, sum_n(n));
-  free(str);
-
-  str = readline("Enter a string: ");
-  print_n(str, n);
-
-  free(str);
+int main(void) 
+{
+  int n = atof(readline("Enter an int: "));
+  printf("sum is %d. \n", sum_n(n));
+  const char *s = readline("Enter a string: ");
+  print_n(s,n);
   return 0;
 }
